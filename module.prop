@@ -3,4 +3,4 @@ name=A-GPS SUPL replacer
 version=v1
 versionCode=1
 author=Victor Bouvier-Deleau
-description=Magisk module to replace the SUPL (Secure User-Plane Location) provider in Android's gps.conf.
+description=Replace the SUPL (Secure User-Plane Location) provider in Android's gps.conf.
