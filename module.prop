@@ -2,5 +2,5 @@ id=supl-replacer
 name=A-GPS SUPL replacer
 version=v1
 versionCode=1
-author=Victor Bouvier-Deleau
+author=PlqnK
 description=Replace the SUPL (Secure User-Plane Location) provider in Android's gps.conf.
