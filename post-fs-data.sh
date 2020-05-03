@@ -2,7 +2,35 @@
 
 MODDIR=${0%/*}
 
-cp /system/vendor/etc/gps.conf "${MODDIR}/system/vendor/etc/gps.conf"
-sed -i 's/^SUPL_HOST=.*/SUPL_HOST=supl.vodafone.com/' "${MODDIR}/system/vendor/etc/gps.conf"
-sed -i 's/^NTP_SERVER=.*/NTP_SERVER=pool.ntp.org/' "${MODDIR}/system/vendor/etc/gps.conf"
-rm "${MODDIR}/system/vendor/etc/.gitkeep"
+SUPL_HOST=supl.vodafone.com
+NTP_SERVER=pool.ntp.org
+
+# For new "Treble enabled" devices
+if [ -f /system/vendor/etc/gps.conf ]; then
+  cp /system/vendor/etc/gps.conf "${MODDIR}/system/vendor/etc/gps.conf"
+  sed -i "s/^SUPL_HOST=.*/SUPL_HOST=${SUPL_HOST}/" "${MODDIR}/system/vendor/etc/gps.conf"
+  sed -i "s/^NTP_SERVER=.*/NTP_SERVER=${NTP_SERVER}/" "${MODDIR}/system/vendor/etc/gps.conf"
+  if [ -f "${MODDIR}/system/vendor/etc/.gitkeep" ]; then
+    rm "${MODDIR}/system/vendor/etc/.gitkeep"
+  fi
+else
+  if [ -f "${MODDIR}/system/vendor/etc/.gitkeep" ]; then
+    rm "${MODDIR}/system/vendor/etc/.gitkeep"
+  fi
+  rmdir "${MODDIR}/system/vendor/etc" && rmdir "${MODDIR}/system/vendor"
+fi
+
+# For older devices
+if [ -f /system/etc/gps.conf ]; then
+  cp /system/etc/gps.conf "${MODDIR}/system/etc/gps.conf"
+  sed -i "s/^SUPL_HOST=.*/SUPL_HOST=${SUPL_HOST}/" "${MODDIR}/system/etc/gps.conf"
+  sed -i "s/^NTP_SERVER=.*/NTP_SERVER=${NTP_SERVER}/" "${MODDIR}/system/etc/gps.conf"
+  if [ -f "${MODDIR}/system/etc/.gitkeep" ]; then
+    rm "${MODDIR}/system/etc/.gitkeep"
+  fi
+else
+  if [ -f "${MODDIR}/system/etc/.gitkeep" ]; then
+    rm "${MODDIR}/system/etc/.gitkeep"
+  fi
+  rmdir "${MODDIR}/system/etc"
+fi
