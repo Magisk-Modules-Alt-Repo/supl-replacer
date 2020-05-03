@@ -1,0 +1,31 @@
+---
+name: 'Lint'
+
+on:
+  pull_request:
+    branches:
+      - 'master'
+    paths:
+      - '**.sh'
+      - '**.md'
+
+jobs:
+  shellcheck:
+    name: 'ShellCheck'
+    runs-on: 'ubuntu-latest'
+    steps:
+    - uses: 'actions/checkout@v2'
+    - name: 'Run shellcheck'
+      uses: 'azohra/shell-linter@master'
+      with:
+        path: '*.sh'
+  markdown-lint:
+    name: 'Markdown Lint'
+    runs-on: 'ubuntu-latest'
+    steps:
+    - uses: 'actions/checkout@v2'
+    - name: 'Run markdownlint'
+      uses: 'avto-dev/markdown-lint@master'
+      with:
+        args: '.'
+        config: '.markdownlint.yml'
