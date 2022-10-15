@@ -26,7 +26,7 @@ This module also replaces the NTP server specified in the same configuration fil
 
 ## Installation
 
-Simply download the latest build from the [Release](https://github.com/PlqnK/magisk-supl-replacer/releases) section and install it with Magisk Manager!
+Simply download the latest build from the [Release](https://github.com/D3SOX/magisk-supl-replacer/releases) section and install it with Magisk Manager!
 
 You can also flash it in a custom recovery like TWRP but using Magisk Manager is definitely recommended.
 
