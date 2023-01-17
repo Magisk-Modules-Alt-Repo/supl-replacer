@@ -11,7 +11,8 @@ At least the service is self-hosted by the company in France and Orange also sho
 
 The other active alternative providers with port 7275 accessible that I know of are:
 
-- Sony Mobile: `supl.sonyericsson.com`
+- Telstra: `agps.supl.telstra.com`
+- T-Mobile: `lbs.geo.t-mobile.com`
 - Qianxun SI (China based): `supl.qxwz.com`
 
 Another solution would simply be to disable SUPL altogether by replacing `supl.google.com` with `localhost`, but then the Time to First Fix can increase a lot, going from a couple of seconds to a couple of minutes.
