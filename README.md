@@ -6,11 +6,11 @@ Magisk module to replace the SUPL (Secure User-Plane Location) provider in Andro
 
 SUPL is used as part of the A-GPS (Assisted GPS) system to get a faster Time to First Fix. The problem is that Android's implementation automatically sends the IMSI (ID of the SIM card) to the SUPL provider for no apparent reason. And because Google is the default provider it's a big breach of privacy.
 
-This module replaces the SUPL provider with one from Orange. It's not perfect, the company isn't known for its privacy involvement, but it's not possible to self-host a SUPL server and I haven't found a better provider.  
-At least the service is self-hosted by the company in France and Orange also shouldn't be subject to US law because they don't operate there.
+This module replaces the SUPL provider with a proxy server provided by GrapheneOS. The company is known for its privacy involvement.
 
 The other active alternative providers with port 7275 accessible that I know of are:
 
+- Orange: `agpss.orange.fr`
 - Telstra: `agps.supl.telstra.com`
 - T-Mobile: `lbs.geo.t-mobile.com`
 - Qianxun SI (China based): `supl.qxwz.com`
