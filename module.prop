@@ -1,6 +1,6 @@
 id=supl-replacer
 name=A-GPS SUPL replacer
-version=v2.1.0
-versionCode=3
+version=v2.2.0
+versionCode=4
 author=PlqnK, D3SOX
 description=Replace the SUPL (Secure User-Plane Location) provider in Android's gps.conf.
