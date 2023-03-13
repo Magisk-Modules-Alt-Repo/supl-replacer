@@ -2,7 +2,7 @@
 
 MODDIR=${0%/*}
 
-SUPL_HOST=agpss.orange.fr
+SUPL_HOST=supl.grapheneos.org
 NTP_SERVER=europe.pool.ntp.org
 
 # For new "Treble enabled" devices
