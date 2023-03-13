@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: 'actions/checkout@v3'
     - name: 'Run shellcheck'
-      uses: 'azohra/shell-linter@master'
+      uses: 'azohra/shell-linter@latest'
       with:
         path: '*.sh'
   markdown-lint:
@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: 'actions/checkout@v3'
     - name: 'Run markdownlint'
-      uses: 'avto-dev/markdown-lint@master'
+      uses: 'avto-dev/markdown-lint@latest'
       with:
         args: '.'
         config: '.markdownlint.yml'
