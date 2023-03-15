@@ -49,7 +49,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - A license file.
 - GitHub workflows to lint the script as well as build and publish the module.
 
-[2.2.1]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.2.1
+[2.2.1]: https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/releases/tag/v2.2.1
 [2.2.0]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.2.0
 [2.1.0]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.1.0
 [2.0.0]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.0.0
