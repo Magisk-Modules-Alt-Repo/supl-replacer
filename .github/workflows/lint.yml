@@ -27,5 +27,6 @@ jobs:
     - name: 'Run markdownlint'
       uses: 'avto-dev/markdown-lint@v1'
       with:
-        args: '.'
-        config: '.markdownlint.yml'
+        rules: '/lint/rules/changelog.js'
+        config: '/lint/config/changelog.yml'
+        args: './CHANGELOG.md'
