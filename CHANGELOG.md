@@ -43,11 +43,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Everything needed to make a standard Magisk module.
-- A `post-fs-data` script that replaces the values of `SUPL_HOST` and `NTP_SERVER` in Android's `gps.conf`.
-- A readme detailing everything needed to know before installing the module.
-- A license file.
-- GitHub workflows to lint the script as well as build and publish the module.
+- Everything needed to make a standard Magisk module
+- A `post-fs-data` script that replaces the values of `SUPL_HOST` and `NTP_SERVER` in Android's `gps.conf`
+- A readme detailing everything needed to know before installing the module
+- A license file
+- GitHub workflows to lint the script as well as build and publish the module
 
 [2.2.1]: https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/releases/tag/v2.2.1
 [2.2.0]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.2.0
