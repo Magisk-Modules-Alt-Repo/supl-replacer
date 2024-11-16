@@ -3,7 +3,7 @@
 MODDIR=${0%/*}
 
 # Switch to the non-tracking graphene os supl provider
-SUPL_HOST=supl.grapheneos.orgf
+SUPL_HOST=supl.grapheneos.org
 # Ensure the supl port as some devices wont set it by default
 SUPL_PORT=7275
 # Use the global pool.ntp.org to get the closest ntp server available
@@ -46,14 +46,14 @@ if [ -f /system/etc/gps.conf ]; then
   else
     # append if it's not there yet
     echo "SUPL_HOST=${SUPL_HOST}" >> "${MODDIR}/system/etc/gps.conf"
-    echo "SUPL_HOST=${SUPL_PORT}" >> "${MODDIR}/system/etc/gps.conf"
+    echo "SUPL_PORT=${SUPL_PORT}" >> "${MODDIR}/system/etc/gps.conf"
   fi
 
   sed -i "s/^NTP_SERVER=.*/NTP_SERVER=${NTP_SERVER}/" "${MODDIR}/system/etc/gps.conf"
 fi
 
 # For devices where only gps_debug is present
-if [ -f /system/etc/gps_debug.conf ] && [ ! -f /system/etc/gps.confg ]; then
+if [ -f /system/etc/gps_debug.conf ] && [ ! -f /system/etc/gps.conf ]; then
   cp /system/etc/gps_debug.conf "${MODDIR}/system/etc/gps_debug.conf"
 
   if grep -q "^SUPL_HOST=.*" "${MODDIR}/system/etc/gps_debug.conf"; then
@@ -67,6 +67,7 @@ if [ -f /system/etc/gps_debug.conf ] && [ ! -f /system/etc/gps.confg ]; then
   fi
 
   sed -i "s/^NTP_SERVER=.*/NTP_SERVER=${NTP_SERVER}/" "${MODDIR}/system/etc/gps_debug.conf"
+fi
 
 # Moved cleanup to avoid code duplication
 if [ -f /system/etc/gps.conf ] || [ -f /system/etc/gps_debug.conf ]; then
