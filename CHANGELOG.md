@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.2] - 2024-16-11
+
+🎉 Patch gps_debug.conf if present and switched to global ntp server
+
+### Changed
+
+- Use `7275` as `SUPL_PORT`, as some devices wont have it set as the default.
+- Use `pool.ntp.org` as `NTP_SERVER` ([see](https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/issues/2))
+
+### Fixed
+
+- Fix gps_debug.conf not being patched if present, causing the module to not work on some devices ([see](https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/issues/3#issuecomment-1892796390))
+
 ## [2.2.1] - 2023-03-13
 
 🎉 Support updating module via Magisk Manager
@@ -49,6 +62,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - A license file
 - GitHub workflows to lint the script as well as build and publish the module
 
+[2.2.1]: https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/releases/tag/v2.2.2
 [2.2.1]: https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/releases/tag/v2.2.1
 [2.2.0]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.2.0
 [2.1.0]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.1.0
