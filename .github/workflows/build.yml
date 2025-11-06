@@ -29,7 +29,7 @@ jobs:
         uses: 'TheDoctor0/zip-release@0.7.5'
         with:
           filename: 'supl-replacer-${{ env.MODULE_VERSION }}.zip'
-          exclusions: '*.git* *.md *.yml LICENSE'
+          exclusions: '*.git* *.md *.yml LICENSE lint/*'
       - name: 'Upload the build artifact'
         uses: 'actions/upload-artifact@v4'
         with:
