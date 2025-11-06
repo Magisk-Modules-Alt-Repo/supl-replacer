@@ -56,12 +56,14 @@ if [ -f /system/vendor/etc/gps.conf ]; then
 fi
 
 # For other devices
-for SRC in /system/etc/gps_debug.conf /system/etc/gps.conf; do
-  if [ -f "$SRC" ]; then
-    BASENAME="$(basename "$SRC")"
-    cp "$SRC" "${MODDIR}/system/etc/${BASENAME}"
-    update_conf "${MODDIR}/system/etc/${BASENAME}"
-  fi
-done
+# Prefer /system/etc/gps.conf if present. If missing, but gps_debug.conf exists,
+# copy it as gps.conf (fallback behavior).
+if [ -f /system/etc/gps.conf ]; then
+  cp /system/etc/gps.conf "${MODDIR}/system/etc/gps.conf"
+  update_conf "${MODDIR}/system/etc/gps.conf"
+elif [ -f /system/etc/gps_debug.conf ]; then
+  cp /system/etc/gps_debug.conf "${MODDIR}/system/etc/gps.conf"
+  update_conf "${MODDIR}/system/etc/gps.conf"
+fi
 
 clean

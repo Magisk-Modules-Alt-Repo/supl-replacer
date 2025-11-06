@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.1] - 2025-11-06
+
+### Added
+
+- If `/system/etc/gps.conf` is missing but `gps_debug.conf` exists, copy the modified `gps_debug.conf` as `gps.conf` (fallback behavior).
+
 ## [2.3.0] - 2025-11-06
 
 🎉 Add support for NTP server replacement in different scencarios
@@ -63,6 +69,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - GitHub workflows to lint the script as well as build and publish the module
 
 [2.3.0]: https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/releases/tag/v2.3.0
+[2.3.1]: https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/releases/tag/v2.3.1
 [2.2.1]: https://github.com/Magisk-Modules-Alt-Repo/supl-replacer/releases/tag/v2.2.1
 [2.2.0]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.2.0
 [2.1.0]: https://github.com/D3SOX/magisk-supl-replacer/releases/tag/v2.1.0
