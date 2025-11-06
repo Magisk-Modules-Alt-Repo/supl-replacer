@@ -23,7 +23,7 @@ If you want to learn more about the subject here's some reading material:
 - A blog post by a German security researcher that has done an in-depth analysis on to replace the SUPL provider: <https://www.kuketz-blog.de/android-imsi-leaking-bei-gps-positionsbestimmung/>
 - A post on the subreddit /r/degoogle describing other modification you can make to android in order to "degoogle it" more: <https://www.reddit.com/r/degoogle/comments/cldohl/how_to_degoogle_lineageos_in_2019/>
 
-This module also replaces the NTP server specified in the same configuration file with `europe.pool.ntp.org` which when resolved returns the IP of the closest european NTP server.
+This module also replaces the NTP server specified in the same configuration file with `pool.ntp.org` which resolves to a nearby NTP server.
 
 ## Installation
 
